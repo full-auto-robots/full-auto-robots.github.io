@@ -415,7 +415,7 @@ text-overflow: ellipsis;
 }
 
 .search-text > b {
-color: orangered;
+color: #4655e0
 }
 
 .wm-search-page {
@@ -471,7 +471,7 @@ pre, .rst-content tt {
   max-width: 100%;
   background: #282b2e;
   border: solid 1px black;
-  /*color: orangered;*/
+  /*color: #4655e0;*/
   overflow-x: auto;
 }
 
