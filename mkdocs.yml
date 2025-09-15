@@ -1,4 +1,4 @@
 site_name: My Docs
 nav:
   - Home: index.md
-theme_dir: 'mkdocs-windmill-dark/mkdocs_windmill_dark'
+theme: 'windmill-dark'
