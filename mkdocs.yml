@@ -2,5 +2,5 @@ site_name: My Docs
 nav:
   - Home: index.md
 theme:
-  name: windmill-dark
+  name: 'mkdocs'
   custom_dir: 'mkdocs-windmill-dark/mkdocs_windmill_dark'
