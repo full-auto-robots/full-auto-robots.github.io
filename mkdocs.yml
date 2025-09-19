@@ -4,7 +4,7 @@ nav:
   - Drivetools:
     - About: dt_about.md
     - Installation: dt_install.md
-    - Usage: dt_use.md
+    - Usage: dt_usage.md
 
 theme:
   name: 'windmill-dark'
