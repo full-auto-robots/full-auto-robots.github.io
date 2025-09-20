@@ -1,10 +1,35 @@
 site_name: FAR Robotics
 nav:
   - Home: index.md
+
   - Drivetools:
     - About: dt_about.md
+
     - Installation: dt_install.md
-    - Usage: dt_usage.md
+
+    - Docs:
+      - Docs Home Page: dt_docs.md
+
+      - Displays:
+        - Creating Displays: dt_dsp_creating.md
+        - Text Display: dt_dsp_text.md
+        - Field2D Display: dt_dsp_field2d.md
+        - Field3D Display: dt_dsp_field3d.md
+        - Button Display: dt_dsp_button.md
+        - Image Display: dt_dsp_image.md
+
+      - Networking:
+        - Connecting To The Robot: dt_net_connecting.md
+
+      - _ROBOT_:
+        - What Is This Folder? : dt_rob_about.md
+
+        - Classes:
+          - nav_field: dt_rob_nav_field.md
+          - nav_path: dt_rob_nav_path.md
+          - nav_robot: dt_rob_nav_robot.md
+          - Vectors: dt_rob_vectors.md
+
 
 theme:
   name: 'windmill-dark'
