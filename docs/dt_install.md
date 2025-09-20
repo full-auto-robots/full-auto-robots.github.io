@@ -1,3 +1,5 @@
 # Installing DriveTools
 
-* GitHub: See the GitHub page for instructions on installation (https://github.com/full-auto-robots/drivetools).
+Here are your installation options:
+
+* `GitHub`: See the DriveTools [GitHub page](https://github.com/full-auto-robots/drivetools) for instructions on installation.

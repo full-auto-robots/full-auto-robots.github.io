@@ -7,11 +7,14 @@ nav:
 
     - Installation: dt_install.md
 
+    - Reporting A Bug: dt_bugreport.md
+
     - Docs:
       - Docs Home Page: dt_docs.md
 
       - Displays:
         - Creating Displays: dt_dsp_creating.md
+        - Editing Displays: dt_dsp_editing.md
         - Text Display: dt_dsp_text.md
         - Field2D Display: dt_dsp_field2d.md
         - Field3D Display: dt_dsp_field3d.md
@@ -19,6 +22,7 @@ nav:
         - Image Display: dt_dsp_image.md
 
       - Networking:
+        - What Is NetworkTables?: dt_net_basics.md
         - Connecting To The Robot: dt_net_connecting.md
 
       - _ROBOT_:
@@ -29,6 +33,8 @@ nav:
           - nav_path: dt_rob_nav_path.md
           - nav_robot: dt_rob_nav_robot.md
           - Vectors: dt_rob_vectors.md
+
+      - I Want To Make A Dashboard!: dt_development.md
 
 
 theme:
