@@ -34,7 +34,7 @@ nav:
           - nav_robot: dt_rob_nav_robot.md
           - Vectors: dt_rob_vectors.md
 
-      - I Want To Make A Dashboard!: dt_development.md
+    - I Want To Make A Dashboard!: dt_development.md
 
 
 theme:
