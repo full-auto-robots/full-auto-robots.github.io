@@ -14,7 +14,7 @@ These are one of the most useful display objects that you can use. They can be u
 
 ## Getting The Data
 
-Field2D displays can take in one of TWO data types from NetworkTables. Either a nav_robot by itself, or a whole nav_field class if you want to display more than a robot's position and rotation. In any case, just [edit the display](https://full-auto-robots.github.io/#dt_dsp_editing/) and set the NT Key to wherever your data class is located.
+Field2D displays can take in one of TWO data types from NetworkTables. Either a nav_robot by itself, or a whole nav_field class if you want to display more than a robot's position and rotation. In any case, just [edit the display](https://full-auto-robots.github.io/dt_dsp_editing/) and set the NT Key to wherever your data class is located.
 
 ***
 
