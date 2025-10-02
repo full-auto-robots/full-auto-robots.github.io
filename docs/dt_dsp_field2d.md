@@ -6,11 +6,11 @@ These are one of the most useful display objects that you can use. They can be u
 
 ## Things to be familiar with:
 
-* [robot programming](https://full-auto-robots.github.io/#dt_rob_about/) with DriveTools
+* [robot programming](https://full-auto-robots.github.io/dt_rob_about/) with DriveTools
 
-* the [nav_robot](https://full-auto-robots.github.io/#dt_rob_nav_robot/) class
-* the [nav_path](https://full-auto-robots.github.io/#dt_rob_nav_path/) class
-* the [nav_field](https://full-auto-robots.github.io/#dt_rob_nav_field/) class
+* the [nav_robot](https://full-auto-robots.github.io/dt_rob_nav_robot/) class
+* the [nav_path](https://full-auto-robots.github.io/dt_rob_nav_path/) class
+* the [nav_field](https://full-auto-robots.github.io/dt_rob_nav_field/) class
 
 ## Getting The Data
 
