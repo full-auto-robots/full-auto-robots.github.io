@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Field2D Display - FAR Robotics</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Field2D Displays", url: "#_top", children: [
+              {title: "Things to be familiar with:", url: "#things-to-be-familiar-with" },
+              {title: "Getting The Data", url: "#getting-the-data" },
+              {title: "Elements of A Field", url: "#elements-of-a-field" },
+              {title: "The Field Editor", url: "#the-field-editor" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../dt_dsp_field3d/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../dt_dsp_field3d/" class="btn btn-xs btn-link">
+        Field3D Display
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../dt_dsp_text/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../dt_dsp_text/" class="btn btn-xs btn-link">
+        Text Display
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="field2d-displays">Field2D Displays</h1>
+<p>[image of what it looks like]</p>
+<p>These are one of the most useful display objects that you can use. They can be used to visualize data coming from the bot, or upload data to the robot, or even command the robot by sending it coordinates. You could use them to see the position/rotation of the robot, show paths and shapes, things like that.</p>
+<h2 id="things-to-be-familiar-with">Things to be familiar with:</h2>
+<ul>
+<li>
+<p><a href="https://full-auto-robots.github.io/dt_rob_about/">robot programming</a> with DriveTools</p>
+</li>
+<li>
+<p>the <a href="https://full-auto-robots.github.io/dt_rob_nav_robot/">nav_robot</a> class</p>
+</li>
+<li>the <a href="https://full-auto-robots.github.io/dt_rob_nav_path/">nav_path</a> class</li>
+<li>the <a href="https://full-auto-robots.github.io/dt_rob_nav_field/">nav_field</a> class</li>
+</ul>
+<h2 id="getting-the-data">Getting The Data</h2>
+<p>Field2D displays can take in one of TWO data types from NetworkTables. Either a nav_robot by itself, or a whole nav_field class if you want to display more than a robot's position and rotation. In any case, just <a href="https://full-auto-robots.github.io/dt_dsp_editing/">edit the display</a> and set the NT Key to wherever your data class is located.</p>
+<hr />
+<h2 id="elements-of-a-field">Elements of A Field</h2>
+<h3 id="robots">Robots</h3>
+<p>If you read the page about the <code>nav_robot</code> class, then you'll know what kind of data you'll need. Field2D nodes have an array of nav_robot classes, which get turned into strings the same way that an individual nav_robot class would via nav_robot.EncodeToString().
+This is done so that tracking multiple bots can be supported. </p>
+<h3 id="paths">Paths</h3>
+<p>Field2D nodes have an array of nav_path classes as well. These can represent really whatever you want, as long as whatever you want is a collection of points in 3D space. Some ideas:
+* A trail showing where the robot has been
+* A visualization of an auto
+* Estimated positions of the robot (though you could use more nav_robot classes for this)</p>
+<h3 id="markers">Markers</h3>
+<p>Field markers (the <code>nav_marker</code> class) represent things. They're just images that have a position, rotation, and scale. You can use them to represent Apriltags that the robot can see, game pieces that it has detected, or you can use them as ways to show events like an impact (which could ruin odometry). You can draw anything you want using <code>nav_path</code> classes, but using a <code>nav_marker</code> is usually quicker.</p>
+<hr />
+<h2 id="the-field-editor">The Field Editor</h2>
+<p>As mentioned at the top of this page, Field2D nodes can also be used to <em>send</em> data as well as receive it. You do this by clicking the little pencil icon in the top left of the display, which opens the <em>field editor</em>.</p>
+<p>[image of editor button]</p>
+<p>This editor allows you to manually draw paths, place robots, or place markers on the field by clicking.</p>
+<h3 id="addingremoving-field-elements">Adding/Removing Field Elements</h3>
+<p>Field elements of each type can be added by clicking the plus icon next to the name. You'll see an entry appear in the corresponding list for the new field element, and depending on what it is you can place it onto the field.</p>
+<ul>
+<li>For paths, creating a new path puts the editor into 'draw mode'. You click to place new path points, and either press 'Enter' or click the checkmark button to finish drawing the path.</li>
+<li>For robots/markers, just move your mouse to wherever you want to place it and left-click to place. Before you place it, you can use the scrollwheel to rotate it.</li>
+</ul>
+<p>After placing a field element you can change it via the list entry. Paths can be re-drawn and their color can be changed, robot settings can be edited, and so on.</p>
+<p>Removing a field element is as simple as clicking the red 'x' to the right of it's entry in the list.</p>
+<h3 id="uploading-the-finished-field">Uploading The Finished Field</h3>
+<p>When finished, you can click the 'save' button. This will convert the field that you made into a string, and send it to NetworkTables. Now any code that you set up to read from that NetworkTables key can use the field data for whatever you want. </p>
+<p>Also, pressing the save button will tell Drivetools to save the data in the loaded layout (.lyt file) automatically. That way, closing and re-opening the software will preserve exactly the field in the editor. Not all NetworkTables data gets saved in the layout! It's only the data that <em>you yourself pushed manually</em>.</p>
+<h3 id="trying-to-getreceive-data-at-the-same-time">Trying To Get/Receive Data At The Same Time</h3>
+<p>...just don't. Don't try this. When in the field editor the Field2D node will <em>in theory</em> ignore whatever's happening on NetworkTables, but it's better to not try and use the Field2D nodes as two-way, unless you <em>really</em> know what you're doing.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../dt_dsp_field3d/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../dt_dsp_field3d/" class="btn btn-xs btn-link">
+        Field3D Display
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../dt_dsp_text/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../dt_dsp_text/" class="btn btn-xs btn-link">
+        Text Display
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI (noraj).</p>
+</footer>
+
+</body>
+</html>
