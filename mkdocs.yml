@@ -3,6 +3,8 @@ nav:
   - Home: index.md
 
   - Guides:
+    - Object Detection:
+      - Training Object Detection Models: g_objdet_training.md
 
   - Drivetrain:
     - About: dtr_about.md
