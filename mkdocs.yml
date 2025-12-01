@@ -2,6 +2,20 @@ site_name: FAR Robotics
 nav:
   - Home: index.md
 
+  - Guides:
+    - Object Detection:
+      - Training Object Detection Models: g_objdet_training.md
+
+  - Drivetrain:
+    - About: dtr_about.md
+
+    - Installation: dtr_install.md
+
+    - Reporting A Bug: dtr_bugreport.md
+
+    - Docs:
+      - Docs Home Page: dtr_docs.md
+
   - Drivetools:
     - About: dt_about.md
 
