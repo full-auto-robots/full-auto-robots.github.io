@@ -7,7 +7,7 @@ nav:
       - Training Object Detection Models: g_objdet_training.md
 
   - Drivetrain:
-    - Home: dt_home.md
+    - Home: dtr_home.md
     - About: dtr_about.md
 
     - Installation: dtr_install.md
