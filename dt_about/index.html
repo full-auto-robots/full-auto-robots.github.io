@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>About - FAR Robotics</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "What\u0027s DriveTools?", url: "#_top", children: [
+              {title: "Why did you make it?", url: "#why-did-you-make-it" },
+              {title: "Why did you make a dashboard with a game engine?", url: "#why-did-you-make-a-dashboard-with-a-game-engine" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../dt_install/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../dt_install/" class="btn btn-xs btn-link">
+        Installation
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../dt_home/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../dt_home/" class="btn btn-xs btn-link">
+        Home
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="whats-drivetools">What's DriveTools?</h1>
+<p>DriveTools is a customizable FRC Dashboard (a program that allows you to display data coming in from an FRC robot). It's meant for use both in-house for testing and in-competition during matches.</p>
+<p>Basically, it tries to combine the best of data visualization programs like AdvantageScope and dashboards like Elastic. The goal is to create a software that can do both, very effectively. A one-stop-shop for robot programming and driving.</p>
+<p>It communicates with FRC robots using <code>NetworkTables</code> (specifically the <code>NT3</code> protocol). What is that? Find out <a href="https://full-auto-robots.github.io/#dt_net_basics/">here</a> or <a href="https://docs.wpilib.org/en/stable/docs/software/networktables/networktables-intro.html">here</a>, more specifics <a href="https://docs.wpilib.org/en/stable/docs/software/networktables/index.html">here</a>. <em>Code examples are usually provided when talking about robot code, but it's always good to have background knowledge.</em></p>
+<h2 id="why-did-you-make-it">Why did you make it?</h2>
+<p>I don't have a nice, clean answer to this question. I guess after realizing that a custom dashboard was within reach, I just wanted to try making one. So there, <em>curiosity</em> is the best answer I can give. All the rest I found out <em>after</em> I had already started.</p>
+<p>Still, now that DriveTools exists I can do a lot more interesting things with FRC robots. It makes it easy to display stuff <em>other</em> than a single robot on the field display, which for one is very useful. That said I may have just not looked at other softwares that can do this.</p>
+<h2 id="why-did-you-make-a-dashboard-with-a-game-engine">Why did you make a dashboard with a game engine?</h2>
+<p>Right so the observant among you have realized that DriveTools was made with the Unity game engine. I did this for two reasons: </p>
+<ul>
+<li>
+<p>One, I was already familiar with both it and C#, and the NetworkTables plugin I found worked with it.</p>
+</li>
+<li>
+<p>Two, I knew I wanted 3D functionality in DriveTools, and Unity had built-in 3D rendering. I hadn't written any 3D renderers by that time, and thought that was way further out of reach.</p>
+</li>
+</ul>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../dt_install/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../dt_install/" class="btn btn-xs btn-link">
+        Installation
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../dt_home/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../dt_home/" class="btn btn-xs btn-link">
+        Home
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI (noraj).</p>
+</footer>
+
+</body>
+</html>
