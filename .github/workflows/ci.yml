@@ -26,4 +26,4 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-windmill-dark
-      - run: mkdocs build
+      - run: mkdocs build -f ./documentation/mkdocs.yml
