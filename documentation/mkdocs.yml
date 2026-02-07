@@ -1,4 +1,10 @@
 site_name: FAR Robotics
+site_url: https://full-auto-robots.github.io/documentation/
+use_directory_urls: true
+
+extra:
+  base_path: /documentation/
+
 nav:
   - Home: index.md
 
