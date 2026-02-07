@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>I Want To Make A Dashboard! - FAR Robotics</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Making An FRC Dashboard", url: "#_top", children: [
+              {title: "A word of warning", url: "#a-word-of-warning" },
+              {title: "Building off of DriveTools", url: "#building-off-of-drivetools" },
+              {title: "Vital resources", url: "#vital-resources" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../dt_rob_vectors/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../dt_rob_vectors/" class="btn btn-xs btn-link">
+        Vectors
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="making-an-frc-dashboard">Making An FRC Dashboard</h1>
+<p>Okay so for whatever reason, DriveTools isn't good enough for you. Instead of emailing me at <code>full-auto-robots@gmail.com</code> and explaning what you would add (do consider reaching out, I want this software to be as good as possible) you just want to make your own software. </p>
+<p>Fine. That's pretty much what I did when I made DriveTools in the first place. Read on, then.</p>
+<h2 id="a-word-of-warning">A word of warning</h2>
+<p>Programming an FRC Dashboard from scratch is not easy. Unlike programming an FRC robot, nobody is giving you template projects that you can build off of and there are less people who are going to have the same problems as you. If you are an inexperienced software developer, I'd be weary of trying something like this out.</p>
+<p>It's not that I don't think it'll work as a learning experience. I actually think the opposite, diving into a project tends to teach you a lot (check out the <a href="https://github.com/full-auto-robots/drivetools-OLD">old DriveTools</a> to see the difference between my skills then and now). </p>
+<p>But notice how I said <em>software developer</em>, not <em>coder</em>? If you want to make a dashboard and plan on publishing it, you've gotta make some smart decisions when designing it. Otherwise you'll hit roadblocks later.</p>
+<p>I'm not here to give a course on software design (I don't think I'm really qualified to, anyhow). If you're thinking about it, why not try it? Just don't be afraid to start things over if necessary.</p>
+<h2 id="building-off-of-drivetools">Building off of DriveTools</h2>
+<p>The source files are on GitHub, after all. I might write a tutorial on how to modify DriveTools later, but really all you need to do to start messing around is download <a href="https://unity.com/">Unity</a> - which is free. That's the engine that I used to make DriveTools.</p>
+<p>I actually recommend <em>not</em> doing this. The above warning not only still applies, but I think you'll be worse off. Things might get complicated if you're trying to do more than tweak a few things.</p>
+<p>You're welcome to try it, though. </p>
+<p><em>(Just don't go acting like you made it yourself.)</em></p>
+<h2 id="vital-resources">Vital resources</h2>
+<p>The most important thing when making an FRC Dashboard is the ability to work with NetworkTables. I wrote DriveTools in <code>C#</code>, the language that Unity uses, so I needed a version of NetworkTables that worked in C#. Finding this was actually the reason that I set out to make DriveTools in the first place.</p>
+<p>You have three options:</p>
+<ul>
+<li>
+<p>NT3, as a wrapper:</p>
+</li>
+<li>
+<p>NT3, fully translated:</p>
+</li>
+<li>
+<p>NT4:</p>
+</li>
+</ul>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../dt_rob_vectors/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../dt_rob_vectors/" class="btn btn-xs btn-link">
+        Vectors
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI (noraj).</p>
+</footer>
+
+</body>
+</html>
