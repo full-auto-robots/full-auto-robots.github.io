@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberpunk Title Page</title>
-  <style>
-    /* Import futuristic font */
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floating Shapes with Parallax</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* extra height for scrolling */
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  }
 
-    /* Background */
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at 50% 50%, #0f0c29, #302b63, #24243e);
-      font-family: 'Orbitron', sans-serif;
-      color: #0ff;
-      overflow: hidden;
-      perspective: 1000px;
-    }
+  .shape {
+    position: absolute;
+    opacity: 0.7;
+    animation: float 10s infinite linear;
+    pointer-events: none;
+  }
 
-    /* Neon title */
-    h1 {
-      font-size: 4rem;
-      text-transform: uppercase;
-      color: #ffffff;
-      text-shadow: 
-        0 0 5px #ffffff,
-        0 0 10px #ffffff,
-        0 0 20px #ffffff,
-        0 0 40px #ffffff,
-        0 0 80px #ffffff,
-        0 0 90px #ffffff;
-      animation: glitch 2s infinite;
-    }
+  .circle {
+    border-radius: 50%;
+    background: rgba(255, 200, 200, 0.6);
+  }
 
-    /* Glitch effect */
-    @keyframes glitch {
-      0% {
-        text-shadow: 2px 2px #ffffff, -2px -2px #ffffff;
-      }
-      20% {
-        text-shadow: -2px -2px #ffffff, 2px 2px #ffffff;
-      }
-      40% {
-        text-shadow: 2px -2px #ffffff, -2px 2px #ffffff;
-      }
-      60% {
-        text-shadow: -2px 2px #ff00ff, 2px -2px #ffffff;
-      }
-      80% {
-        text-shadow: 2px 2px #ff00ff, -2px -2px #ffffff;
-      }
-      100% {
-        text-shadow: 0 0 #ff00ff, 0 0 #ffffff;
-      }
-    }
+  .square {
+    background: rgba(200, 255, 200, 0.6);
+  }
 
-    /* Scanline overlay */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 1px,
-        transparent 3px
-      );
-      pointer-events: none;
-    }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid rgba(200, 200, 255, 0.6);
+    background: none;
+  }
 
-    /* Flicker effect */
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 22%, 24%, 55% {
-        opacity: 0.5;
-      }
-    }
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+  }
 
-    h1 {
-      animation: glitch 2s infinite, flicker 3s infinite;
-    }
-  </style>
+  /* Parallax effect */
+  .parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+</style>
 </head>
 <body>
-  <h1>FULL AUTO ROBOTS</h1>
+
+<div class="parallax" id="parallax"></div>
+
+<script>
+  const parallax = document.getElementById('parallax');
+  const shapes = ['circle', 'square', 'triangle'];
+  const numShapes = 30;
+
+  for (let i = 0; i < numShapes; i++) {
+    const shape = document.createElement('div');
+    const type = shapes[Math.floor(Math.random() * shapes.length)];
+    shape.classList.add('shape', type);
+
+    if (type === 'triangle') {
+      shape.style.borderBottomColor = `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, 0.6)`;
+    } else {
+      const size = Math.random() * 50 + 20;
+      shape.style.width = size + 'px';
+      shape.style.height = size + 'px';
+      shape.style.background = `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, 0.6)`;
+    }
+
+    shape.style.top = Math.random() * window.innerHeight + 'px';
+    shape.style.left = Math.random() * window.innerWidth + 'px';
+    shape.style.animationDuration = (5 + Math.random() * 10) + 's';
+    shape.style.zIndex = Math.floor(Math.random() * 10); // different depths
+    parallax.appendChild(shape);
+  }
+
+  // Parallax scroll effect
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    document.querySelectorAll('.shape').forEach(shape => {
+      const depth = parseInt(shape.style.zIndex) + 1;
+      shape.style.transform = `translateY(${scrollY / depth}px)`;
+    });
+  });
+</script>
+
 </body>
 </html>
